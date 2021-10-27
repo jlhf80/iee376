@@ -1,0 +1,17 @@
+-- contains notes from class video for ampl terminal
+
+data simplemodel.dat
+solve
+
+display x,y,z;
+x = 20
+y = 0
+z = 40
+
+reset;
+option log_file simplemodel.log;
+option solver cplex;
+data simplemodel.dat;
+expand; -- displays formulation of LP
+
+solve;
